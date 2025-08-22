@@ -16,6 +16,7 @@ class CategoriaController extends Controller
      */
     public function index(): JsonResponse
     {
+        // Obtener todas las categorías ordenadas por nombre
         try {
             $categorias = Categoria::orderBy('nombre', 'asc')->get();
             
